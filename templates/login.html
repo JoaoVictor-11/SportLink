@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title></head>
+<body style="font-family: sans-serif; padding: 20px;">
+    <h2>Entrar no SportLink</h2>
+    
+    <!-- Mostra mensagens de erro se houver -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div style="color: red;">{{ messages[0] }}</div>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+        <p>Email: <input type="email" name="email" required></p>
+        <p>Senha: <input type="password" name="senha" required></p>
+        <button type="submit">Entrar</button>
+    </form>
+    <br>
+    <a href="/cadastro">Não tem conta? Cadastre-se</a>
+</body>
+</html>

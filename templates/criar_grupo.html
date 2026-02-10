@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Criar Novo Grupo</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+        input, button { width: 100%; padding: 10px; margin: 5px 0; }
+        button { background: #27ae60; color: white; border: none; cursor: pointer; font-size: 16px;}
+    </style>
+</head>
+<body>
+    <h1>Novo Grupo</h1>
+    <!-- O form envia os dados para o Python via método POST -->
+    <form action="/criar" method="POST">
+        <label>Esporte:</label>
+        <input type="text" name="esporte" placeholder="Ex: Futevôlei" required>
+        
+        <label>Local:</label>
+        <input type="text" name="local" placeholder="Ex: Praia do Leme" required>
+        
+        <label>Horário:</label>
+        <input type="text" name="horario" placeholder="Ex: Sábado 10h" required>
+
+        <!-- Truque: Como não temos login ainda, vamos pedir o ID do dono na mão -->
+        <label>Seu ID de Usuário (Olhe no terminal):</label>
+        <input type="number" name="id_dono" required>
+
+        <button type="submit">Salvar Grupo</button>
+    </form>
+    <br>
+    <a href="/">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Ignorar arquivos temporários do Python
+__pycache__/
+*.py[cod]
+
+# Ignorar banco de dados (Geralmente não subimos o banco, o dev cria o dele localmente)
+# Mas se você quiser subir pra facilitar, pode remover a linha abaixo.
+# Por padrão, recomendo ignorar:
+*.db
+instance/
+
+# Ignorar pastas de ambiente virtual (se você criar no futuro)
+venv/
+env/
+.env
+
+# Ignorar arquivos de sistema
+.DS_Store
+Thumbs.db
