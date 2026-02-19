@@ -27,6 +27,7 @@
                 </a>
 
                 <a href="/criar" class="btn btn-light btn-sm fw-bold me-2">+ Novo Grupo</a>
+                <a href="/meus_jogos" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-grid-fill"></i> Meus Jogos</a>
                 <a href="/logout" class="btn btn-outline-light btn-sm">Sair</a>
             </div>
         </div>
@@ -38,7 +39,22 @@
             <h1 class="display-5 fw-bold text-primary">Encontre seu time.</h1>
             <p class="lead text-muted">Jogue futebol, vôlei ou basquete perto de você.</p>
         </div>
-
+        <!-- BARRA DE PESQUISA -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <form action="/feed" method="get" class="d-flex gap-2">
+                    <input class="form-control form-control-lg" type="search" name="q" 
+                           placeholder="Qual esporte ou local você procura?" 
+                           value="{{ request.args.get('q', '') }}">
+                    <button class="btn btn-primary btn-lg" type="submit">
+                        <i class="bi bi-search"></i>Buscar
+                    </button>
+                    {%if request.args.get('q')%}
+                        <a href="/feed" class="btn btn-outline-secondary btn-lg">Limpar</a>
+                    {%endif%}
+                </form>
+            </div>
+        </div>
         <!-- LISTA DE GRUPOS -->
         <div class="row">
             <!-- AQUI COMEÇA O LOOP CORRETO -->

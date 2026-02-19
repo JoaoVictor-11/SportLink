@@ -1,13 +1,81 @@
 <!DOCTYPE html>
-<html>
-<head><title>Cadastro</title></head>
-<body style="font-family: sans-serif; padding: 20px;">
-    <h2>Crie sua conta</h2>
-    <form method="POST">
-        <p>Nome: <input type="text" name="nome" required></p>
-        <p>Email: <input type="email" name="email" required></p>
-        <p>Senha: <input type="password" name="senha" required></p>
-        <button type="submit">Cadastrar</button>
-    </form>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro - SportLink</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); /* Um verde esportivo para diferenciar */
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-cadastro {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5 col-lg-4">
+                <div class="card card-cadastro p-4">
+                    <div class="text-center mb-4">
+                        <h2 class="text-success fw-bold"><i class="bi bi-person-plus-fill"></i> Criar Conta</h2>
+                        <p class="text-muted">Junte-se ao time do SportLink</p>
+                    </div>
+
+                    <form method="POST">
+                        <!-- NOME -->
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="nome" id="floatingName" placeholder="Seu Nome" required>
+                            <label for="floatingName">Nome Completo</label>
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput">Endereço de Email</label>
+                        </div>
+                        
+                        <!-- SENHA -->
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" name="senha" id="floatingPassword" placeholder="Password" required>
+                            <label for="floatingPassword">Crie uma Senha</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" required id="termos">
+                            <label class="form-check-label small text-muted" for="termos">
+                                Concordo com os Termos de Uso
+                            </label>
+                        </div>
+
+                        <button class="btn btn-success w-100 py-2 fw-bold" type="submit">Cadastrar</button>
+                    </form>
+
+                    <hr class="my-4">
+
+                    <div class="text-center">
+                        <p class="mb-0 text-muted">Já tem uma conta?</p>
+                        <a href="/login" class="text-decoration-none fw-bold text-success">Fazer Login</a>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-3">
+                    <a href="/" class="text-white text-decoration-none"><i class="bi bi-arrow-left"></i> Voltar para o início</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
