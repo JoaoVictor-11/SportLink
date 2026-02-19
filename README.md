@@ -82,8 +82,9 @@ Pré-requisitos: Python 3.x instalado.
 ```bash
 git clone https://github.com/JoaoVictor-11/SportLink.git
 cd SportLink
-
+```
 ### 2. Crie um Ambiente Virtual (Recomendado)
+```bash
     # Windows
     python -m venv venv
     venv\Scripts\activate
@@ -91,15 +92,18 @@ cd SportLink
     # Linux/Mac
     python3 -m venv venv
     source venv/bin/activate
-
+```
 ### 3. Instale as dependências
+```bash
     pip install -r requirements.txt
-
+```
 ### 4. Execute a aplicação
+```bash
     python app_web.pyO 
     servidor iniciará em http://127.0.0.1:5000. O banco de dados será criado automaticamente na primeira execução.
-
+```
 📂 Estrutura de Arquivos
+
     SportLink/
     ├── instance/            # Banco de dados SQLite (gerado automaticamente)
     ├── static/              # Arquivos Estáticos
